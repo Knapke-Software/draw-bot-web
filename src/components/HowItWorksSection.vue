@@ -37,8 +37,8 @@
       <!-- Bottom call-out -->
       <div class="mt-20 rounded-2xl border border-white/5 bg-[#111118] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <p class="text-white font-bold text-xl mb-1">Ready before your crew arrives.</p>
-          <p class="text-zinc-500 text-sm">The robot runs overnight. Your team starts building the next morning — not measuring.</p>
+          <p class="text-white font-bold text-xl mb-1">Done in hours, not days.</p>
+          <p class="text-zinc-500 text-sm">One operator runs the robot while the rest of your crew is on other work. Everyone starts building from accurate marks.</p>
         </div>
         <a
           href="#demo"
@@ -63,7 +63,7 @@ const steps = [
   },
   {
     title: 'Robot Navigates the Slab',
-    body: 'Summit deploys the robot after hours. It self-localizes on the slab using total station control points and begins printing your layout autonomously.',
+    body: 'Summit deploys the robot on your schedule. It self-localizes on the slab using total station control points and prints your layout with a single operator present.',
   },
   {
     title: 'Crew Builds From Marks',

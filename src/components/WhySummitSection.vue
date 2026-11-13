@@ -57,9 +57,9 @@ const features = [
     body: 'Total station localisation + closed-loop control. Drift doesn\'t accumulate across the floor plate.',
   },
   {
-    emoji: '🌙',
-    title: 'Overnight Autonomy',
-    body: 'The robot runs your layout unattended after the crew leaves. No babysitting required.',
+    emoji: '⚡',
+    title: '10× Faster Layout',
+    body: 'One operator with Summit covers in hours what a full crew takes days to mark manually.',
   },
   {
     emoji: '📐',
@@ -76,6 +76,6 @@ const features = [
 const comparison = [
   { method: 'Manual tape & chalk',   accuracy: '±10–25mm', crew: '2–4 people',  highlight: false },
   { method: 'Robotic total station', accuracy: '±2–5mm',   crew: '1–2 people',  highlight: false },
-  { method: 'Summit Robotics',       accuracy: '<2mm',      crew: '0 — autonomous', highlight: true  },
+  { method: 'Summit Robotics',       accuracy: '<2mm',      crew: '1 operator',  highlight: true  },
 ]
 </script>

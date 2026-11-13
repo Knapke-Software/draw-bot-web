@@ -47,28 +47,15 @@
           </div>
         </div>
 
-        <!-- Right: robot image placeholder -->
+        <!-- Right: robot image -->
         <div class="relative flex items-center justify-center">
-          <div
-            class="relative w-full max-w-md aspect-[4/3] rounded-2xl border border-white/8 overflow-hidden"
-            style="background: radial-gradient(ellipse at 50% 50%, rgba(232,93,4,0.10) 0%, #0d0d14 70%)"
-          >
-            <!-- Decorative corner marks -->
-            <div class="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-orange-DEFAULT/40 rounded-tl"></div>
-            <div class="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-orange-DEFAULT/40 rounded-tr"></div>
-            <div class="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-orange-DEFAULT/40 rounded-bl"></div>
-            <div class="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-orange-DEFAULT/40 rounded-br"></div>
-
-            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-zinc-600 text-sm">
-              <svg class="w-10 h-10 text-zinc-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke-linecap="round" />
-              </svg>
-              <span class="text-zinc-600 text-xs tracking-wide">Robot image coming soon</span>
-            </div>
+          <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-white/8">
+            <img
+              src="../assets/robot.png"
+              alt="Summit Robotics layout robot on a concrete slab"
+              class="w-full h-full object-cover"
+            />
           </div>
-
           <!-- Orange glow behind card -->
           <div class="absolute -inset-8 rounded-full bg-orange-DEFAULT/5 blur-3xl -z-10"></div>
         </div>
@@ -90,6 +77,6 @@ const stats = [
   { value: '10×',    label: 'Faster than manual layout' },
   { value: '<2mm',   label: 'Accuracy on the slab' },
   { value: '100%',   label: 'BIM / CAD native' },
-  { value: 'Nights', label: 'Runs unattended overnight' },
+  { value: 'After Hours', label: 'Works while your crew is off-site' },
 ]
 </script>
