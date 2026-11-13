@@ -12,11 +12,6 @@
 
         <!-- Left: copy -->
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-DEFAULT/30 bg-orange-DEFAULT/10 text-orange-DEFAULT text-xs font-semibold uppercase tracking-widest mb-8">
-            <span class="w-1.5 h-1.5 rounded-full bg-orange-DEFAULT animate-pulse"></span>
-            Now Accepting Early Access
-          </div>
-
           <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
             Stop Measuring.<br />
             <span class="text-orange-DEFAULT">Start Building.</span>
@@ -62,10 +57,10 @@
       </div>
 
       <!-- Stat strip -->
-      <div class="mt-20 pt-8 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div v-for="stat in stats" :key="stat.value" class="text-center">
-          <div class="text-2xl font-bold text-white">{{ stat.value }}</div>
-          <div class="text-xs text-zinc-500 mt-1">{{ stat.label }}</div>
+      <div class="mt-20 pt-8 border-t border-white/5 flex flex-wrap gap-x-10 gap-y-6">
+        <div v-for="stat in stats" :key="stat.value" class="flex items-baseline gap-3">
+          <span class="text-2xl font-bold text-white tabular-nums">{{ stat.value }}</span>
+          <span class="text-sm text-zinc-500">{{ stat.label }}</span>
         </div>
       </div>
     </div>
