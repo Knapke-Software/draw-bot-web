@@ -71,7 +71,7 @@ const IconShield = makeIcon(() => [
 const features = [
   {
     title: 'Built for construction-grade accuracy',
-    body: 'Closed-loop motion control with sensor fusion, built around construction-grade precision. We'll publish measured results once field testing is complete.',
+    body: 'Closed-loop motion control with sensor fusion, built around construction-grade precision. We will publish measured results once field testing is complete.',
     icon: IconTarget,
   },
   {
