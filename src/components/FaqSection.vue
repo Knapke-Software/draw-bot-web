@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: 'How accurate will it be?',
-    a: 'Accuracy is our top design priority. We'll publish measured results once field testing is complete.',
+    a: 'Accuracy is our top design priority. We will publish measured results once field testing is complete.',
   },
 ]
 
