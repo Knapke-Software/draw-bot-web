@@ -58,15 +58,8 @@
 
             <div>
               <label class="block text-xs font-semibold text-zinc-400 mb-1.5">Role</label>
-              <select v-model="form.role" class="select-role w-full rounded-md bg-white/5 border border-white/8 text-white text-sm px-4 py-2.5 focus:outline-none focus:border-orange-DEFAULT/60 transition-colors appearance-none">
-                <option value="" disabled selected class="bg-[#111118]">Select your role…</option>
-                <option value="GC" class="bg-[#111118]">General Contractor</option>
-                <option value="Sub" class="bg-[#111118]">Subcontractor</option>
-                <option value="PM" class="bg-[#111118]">Project Manager</option>
-                <option value="Super" class="bg-[#111118]">Superintendent</option>
-                <option value="Owner" class="bg-[#111118]">Owner / Developer</option>
-                <option value="Other" class="bg-[#111118]">Other</option>
-              </select>
+<input v-model="form.role" type="text" required placeholder="Project Manager"
+                class="w-full rounded-md bg-white/5 border border-white/8 text-white placeholder-zinc-600 text-sm px-4 py-2.5 focus:outline-none focus:border-orange-DEFAULT/60 transition-colors" />
             </div>
 
             <div>
@@ -159,12 +152,3 @@ const bullets = [
   'No spam, and you can opt out any time',
 ]
 </script>
-
-<style scoped>
-.select-role {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%2371717a' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1rem;
-}
-</style>
