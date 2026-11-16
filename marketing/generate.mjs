@@ -19,11 +19,24 @@ const loadFont = w => {
 }
 const f400 = loadFont(400), f500 = loadFont(500), f700 = loadFont(700)
 
+// Explicit, space-separated path data (the library's compact output renders truncated in librsvg)
+const n2 = v => String(+v.toFixed(2))
+function pathData(p) {
+  return p.commands.map(c => {
+    switch (c.type) {
+      case 'M': case 'L': return `${c.type}${n2(c.x)} ${n2(c.y)}`
+      case 'Q': return `Q${n2(c.x1)} ${n2(c.y1)} ${n2(c.x)} ${n2(c.y)}`
+      case 'C': return `C${n2(c.x1)} ${n2(c.y1)} ${n2(c.x2)} ${n2(c.y2)} ${n2(c.x)} ${n2(c.y)}`
+      default: return 'Z'
+    }
+  }).join(' ')
+}
+
 function outline(font, text, size, track, x0, base) {
   let x = x0, d = ''
   for (const ch of text) {
     const g = font.charToGlyph(ch)
-    d += g.getPath(x, base, size).toPathData(2)
+    d += pathData(g.getPath(x, base, size))
     x += g.advanceWidth * size / font.unitsPerEm + track
   }
   return { d, end: x - track }
@@ -96,9 +109,26 @@ function banner(w, h, logoW, tagline, tagSize, gap) {
   const tgl = outline(f400, tagline, tagSize, tagSize * .02, (w - tg.end) / 2, top + lh + gap + tagSize * .75)
   return wrap(w, h, `<image href="${dataUri(onDark.svg)}" x="${(w - logoW) / 2}" y="${top}" width="${logoW}" height="${lh}"/><path fill="#a1a1aa" d="${tgl.d}"/>`)
 }
-const og = banner(1200, 630, 820, 'Autonomous construction layout. Launching 2027.', 34, 44)
-write(M('social/og-image.svg'), og)
-await sharp(Buffer.from(og), { density: 144 }).resize(1200, 630).png().toFile(M('social/og-image.png'))
+const OGW = 1200, OGH = 630
+const ogPlain = banner(OGW, OGH, 820, 'Autonomous construction layout. Launching 2027.', 34, 44)
+write(M('social/og-image-plain.svg'), ogPlain)
+await sharp(Buffer.from(ogPlain), { density: 144 }).resize(OGW, OGH).png().toFile(M('social/og-image-plain.png'))
+
+// Share image: robot render on the right, logo + tagline on the left
+const robot = await sharp(path.join(ROOT, 'src/assets/robot.jpg')).resize(700, OGH, { fit: 'cover', position: 'centre' }).toBuffer()
+const lw = 430, lh = lw * onDark.H / onDark.W
+const tag = (t, y) => outline(f400, t, 26, .5, 60, y).d
+const ogOverlay = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${OGW} ${OGH}">
+<defs><linearGradient id="f" x1="0" x2="1"><stop offset="0" stop-color="${DARK}"/><stop offset=".45" stop-color="${DARK}" stop-opacity=".85"/><stop offset="1" stop-color="${DARK}" stop-opacity="0"/></linearGradient></defs>
+<rect x="440" width="520" height="${OGH}" fill="url(#f)"/><rect width="440" height="${OGH}" fill="${DARK}"/>
+<image href="${dataUri(onDark.svg)}" x="60" y="205" width="${lw}" height="${lh}"/>
+<path fill="#d4d4d8" d="${tag('Autonomous construction layout.', 340)}"/>
+<path fill="#a1a1aa" d="${tag('Launching 2027.', 384)}"/></svg>`
+const ogBuf = await sharp({ create: { width: OGW, height: OGH, channels: 3, background: DARK } })
+  .composite([{ input: robot, left: OGW - 700, top: 0 }, { input: await sharp(Buffer.from(ogOverlay), { density: 144 }).resize(OGW, OGH).png().toBuffer() }])
+  .png().toBuffer()
+await sharp(ogBuf).toFile(M('social/og-image.png'))
+await sharp(ogBuf).jpeg({ quality: 86 }).toFile(PUB('og-image.jpg'))
 const li = banner(1584, 396, 760, 'Autonomous construction layout. Launching 2027.', 30, 34)
 write(M('social/linkedin-banner.svg'), li)
 await sharp(Buffer.from(li), { density: 144 }).resize(1584, 396).png().toFile(M('social/linkedin-banner.png'))

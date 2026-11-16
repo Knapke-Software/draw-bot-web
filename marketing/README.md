@@ -20,7 +20,8 @@ SR monogram with the small ramp. SVG + 1024px PNG.
 - `icon-orange-tile`: orange variant
 
 ## social/
-- `og-image`: 1200×630 link-preview image
+- `og-image`: 1200×630 link preview (robot render + logo + tagline); also written to `public/og-image.jpg`, which the site uses
+- `og-image-plain`: logo-and-tagline-only version
 - `linkedin-banner`: 1584×396
 - `avatar-round-800` / `avatar-square-800`: profile pictures
 - `email-signature-600w`: logo for light-background email signatures
