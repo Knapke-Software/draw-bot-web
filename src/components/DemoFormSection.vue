@@ -105,7 +105,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 
-const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORM_ENDPOINT = 'https://formspree.io/f/xqpqpvwk'
 
 const form = reactive({
   firstName: '',
@@ -128,6 +128,7 @@ async function handleSubmit() {
       method:  'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
+        _subject:  'New Summit Robotics waitlist signup',
         firstName: form.firstName,
         lastName:  form.lastName,
         email:     form.email,
