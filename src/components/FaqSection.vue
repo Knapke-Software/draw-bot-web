@@ -1,9 +1,9 @@
 <template>
-  <section id="faq" class="py-24 bg-[#0a0a10] border-t border-white/5">
+  <section id="faq" class="py-16 md:py-24 bg-[#0a0a10] border-t border-white/5">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-4xl font-extrabold tracking-tight mb-12">Frequently asked questions</h2>
+      <h2 v-reveal class="text-4xl font-extrabold tracking-tight mb-12">Frequently asked questions</h2>
       <div class="flex flex-col">
-        <div v-for="item in faqs" :key="item.q" class="py-7 border-t border-white/5">
+        <div v-for="item in faqs" :key="item.q" v-reveal class="py-7 border-t border-white/5">
           <h3 class="text-white font-semibold text-lg mb-2">{{ item.q }}</h3>
           <p class="text-zinc-500 text-sm leading-relaxed">{{ item.a }}</p>
         </div>

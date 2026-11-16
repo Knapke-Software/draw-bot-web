@@ -1,8 +1,8 @@
 <template>
-  <section id="how-it-works" class="py-24 bg-[#0a0a10] border-t border-white/5">
+  <section id="how-it-works" class="py-16 md:py-24 bg-[#0a0a10] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6">
 
-      <div class="mb-14">
+      <div v-reveal class="mb-14">
         <h2 class="text-4xl font-extrabold tracking-tight">From plan file to marked slab</h2>
         <p class="text-zinc-400 mt-3 max-w-lg leading-relaxed">
           No surveyor. No crew standing around with tape measures.
@@ -13,7 +13,8 @@
         <div
           v-for="(step, i) in steps"
           :key="step.title"
-          class="grid lg:grid-cols-[80px_1fr] gap-6 py-10 border-t border-white/5"
+          v-reveal
+          class="grid lg:grid-cols-[80px_1fr] gap-3 lg:gap-6 py-8 lg:py-10 border-t border-white/5"
         >
           <span class="text-5xl font-black text-white/10 leading-none tabular-nums select-none">
             {{ String(i + 1).padStart(2, '0') }}
@@ -25,14 +26,14 @@
         </div>
       </div>
 
-      <div class="mt-4 pt-10 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div v-reveal class="mt-4 pt-10 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <p class="text-white font-semibold text-lg max-w-sm">One operator. One shift. The whole floor marked.</p>
         <a
           href="#demo"
-          class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange-DEFAULT hover:bg-orange-light text-white font-semibold text-sm transition-colors"
+          class="shrink-0 group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange hover:bg-orange-light text-white font-semibold text-sm transition-colors"
         >
           Join the Waitlist
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>

@@ -1,10 +1,10 @@
 <template>
-  <section id="problem" class="py-24 bg-[#0d0d14] border-t border-white/5">
+  <section id="problem" class="py-16 md:py-24 bg-[#0d0d14] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-start">
 
         <!-- Left: lead stat -->
-        <div>
+        <div v-reveal>
           <h2 class="text-zinc-500 text-sm font-medium mb-8 uppercase tracking-widest">Construction layout is still manual</h2>
           <div class="mb-8">
             <div class="flex items-end gap-1 leading-none mb-4">
@@ -22,8 +22,8 @@
         </div>
 
         <!-- Right: two callouts -->
-        <div class="lg:pt-14 flex flex-col divide-y divide-white/5">
-          <div class="pb-8 pl-5 border-l-2 border-orange-DEFAULT/50">
+        <div v-reveal="120" class="lg:pt-14 flex flex-col divide-y divide-white/5">
+          <div class="pb-8 pl-5 border-l-2 border-orange/50">
             <h3 class="text-white font-semibold text-lg mb-2">Measurement error compounds</h3>
             <p class="text-zinc-500 text-sm leading-relaxed">
               A small error at the column grid grows by the time it reaches the partition wall. By the time it surfaces on site, the rework conversation with your GC is already overdue.

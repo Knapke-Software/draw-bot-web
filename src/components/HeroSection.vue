@@ -7,29 +7,29 @@
       backgroundSize: 'auto, 28px 28px',
     }"
   >
-    <div class="max-w-6xl mx-auto px-6 py-24 w-full">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="max-w-6xl mx-auto px-6 py-14 md:py-24 w-full">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
         <!-- Left: copy -->
         <div>
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
+          <h1 class="fade-up text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
             Stop Measuring.<br />
-            <span class="text-orange-DEFAULT">Start Building.</span>
+            <span class="text-orange">Start Building.</span>
           </h1>
 
-          <p class="text-zinc-400 text-lg leading-relaxed mb-10 max-w-lg">
+          <p class="fade-up text-zinc-400 text-lg leading-relaxed mb-10 max-w-lg" style="animation-delay:100ms">
             Summit Robotics is building an autonomous robot that prints construction
             layout directly on the slab from your CAD and BIM files, with no tape
             measures and no layout crew. Launching 2027.
           </p>
 
-          <div class="flex flex-wrap gap-4">
+          <div class="fade-up flex flex-wrap gap-4" style="animation-delay:200ms">
             <a
               href="#demo"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange-DEFAULT hover:bg-orange-light text-white font-semibold transition-colors text-sm"
+              class="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange hover:bg-orange-light text-white font-semibold transition-colors text-sm"
             >
               Join the Waitlist
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </a>
@@ -43,8 +43,8 @@
         </div>
 
         <!-- Right: robot image -->
-        <div class="relative flex items-center justify-center">
-          <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-white/8">
+        <div class="fade-up relative flex items-center justify-center" style="animation-delay:150ms">
+          <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
             <img
               src="../assets/robot.jpg"
               alt="Concept rendering of the Summit Robotics layout robot printing a line on a concrete slab" width="1448" height="1086" fetchpriority="high"
@@ -52,12 +52,12 @@
             />
           </div>
           <!-- Orange glow behind card -->
-          <div class="absolute -inset-8 rounded-full bg-orange-DEFAULT/5 blur-3xl -z-10"></div>
+          <div class="absolute -inset-8 rounded-full bg-orange/5 blur-3xl -z-10"></div>
         </div>
       </div>
 
       <!-- Stat strip -->
-      <div class="mt-20 pt-8 border-t border-white/5 flex flex-wrap gap-x-10 gap-y-6">
+      <div class="fade-up mt-14 md:mt-20 pt-8 border-t border-white/5 flex flex-wrap gap-x-10 gap-y-6" style="animation-delay:350ms">
         <div v-for="stat in stats" :key="stat.value" class="flex items-baseline gap-3">
           <span class="text-2xl font-bold text-white tabular-nums">{{ stat.value }}</span>
           <span class="text-sm text-zinc-500">{{ stat.label }}</span>

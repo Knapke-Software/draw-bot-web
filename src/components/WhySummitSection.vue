@@ -1,8 +1,8 @@
 <template>
-  <section id="why-summit" class="py-24 bg-[#0d0d14] border-t border-white/5">
+  <section id="why-summit" class="py-16 md:py-24 bg-[#0d0d14] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6">
 
-      <div class="mb-14">
+      <div v-reveal class="mb-14">
         <h2 class="text-4xl font-extrabold tracking-tight">Built for the jobsite, not the lab</h2>
         <p class="text-zinc-400 mt-3 max-w-lg leading-relaxed">
           Dust, rough concrete, imperfect slabs. Summit is designed for where construction actually happens.
@@ -12,8 +12,9 @@
       <!-- Feature rows -->
       <div class="grid md:grid-cols-2 gap-x-16">
         <div
-          v-for="feature in features"
+          v-for="(feature, i) in features"
           :key="feature.title"
+          v-reveal="(i % 2) * 100"
           class="flex gap-5 py-7 border-t border-white/5"
         >
           <div class="shrink-0 mt-0.5">
@@ -39,7 +40,7 @@ function makeIcon(paths: () => ReturnType<typeof h>[]) {
   return defineComponent({
     render: () => h(
       'svg',
-      { class: 'w-5 h-5 text-orange-DEFAULT', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.75', viewBox: '0 0 24 24', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+      { class: 'w-5 h-5 text-orange', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.75', viewBox: '0 0 24 24', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
       paths()
     ),
   })
