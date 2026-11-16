@@ -18,7 +18,8 @@
       <nav class="flex items-center gap-6 text-xs text-zinc-500">
         <a href="#how-it-works" class="hover:text-zinc-300 transition-colors">How It Works</a>
         <a href="#why-summit"   class="hover:text-zinc-300 transition-colors">Why Summit</a>
-        <a href="#demo"         class="hover:text-zinc-300 transition-colors">Request a Demo</a>
+        <a href="#faq"          class="hover:text-zinc-300 transition-colors">FAQ</a>
+        <a href="#demo"         class="hover:text-zinc-300 transition-colors">Join the Waitlist</a>
       </nav>
 
       <p class="text-xs text-zinc-600">

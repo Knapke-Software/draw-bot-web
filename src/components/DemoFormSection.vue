@@ -1,17 +1,17 @@
 <template>
-  <section id="demo" class="py-28 bg-[#0a0a10]">
+  <section id="demo" aria-labelledby="waitlist-heading" class="py-28 bg-[#0a0a10]">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-16 items-start">
 
         <!-- Left: copy -->
         <div class="lg:pt-4">
-          <p class="text-orange-DEFAULT text-xs font-semibold uppercase tracking-widest mb-3">Request a Demo</p>
-          <h2 class="text-4xl font-extrabold tracking-tight mb-5">
-            See Summit in Action on Your Project
+          <p class="text-orange-DEFAULT text-xs font-semibold uppercase tracking-widest mb-3">Join the Waitlist</p>
+          <h2 id="waitlist-heading" class="text-4xl font-extrabold tracking-tight mb-5">
+            Get early access when we launch
           </h2>
           <p class="text-zinc-400 leading-relaxed mb-8">
-            We'll walk you through how the system works, answer your questions, and talk through
-            pricing for your upcoming project. No pressure — just a real conversation.
+            Summit is in development, with launch planned for 2027. Tell us about your work and
+            we'll reach out with updates and early-access opportunities.
           </p>
 
           <ul class="flex flex-col gap-4">
@@ -70,7 +70,7 @@
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-zinc-400 mb-1.5">Tell us about your next project <span class="text-zinc-600">(optional)</span></label>
+              <label class="block text-xs font-semibold text-zinc-400 mb-1.5">What would you use it for? <span class="text-zinc-600">(optional)</span></label>
               <textarea v-model="form.message" rows="3" placeholder="Floor area, project type, timeline…"
                 class="w-full rounded-md bg-white/5 border border-white/8 text-white placeholder-zinc-600 text-sm px-4 py-2.5 focus:outline-none focus:border-orange-DEFAULT/60 transition-colors resize-none"></textarea>
             </div>
@@ -80,7 +80,7 @@
               :disabled="submitting"
               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-orange-DEFAULT hover:bg-orange-light disabled:opacity-60 text-white font-semibold text-sm transition-colors"
             >
-              <span v-if="!submitting">Request My Demo</span>
+              <span v-if="!submitting">Join the Waitlist</span>
               <span v-else>Sending…</span>
             </button>
 
@@ -96,7 +96,7 @@
             </div>
             <div>
               <p class="text-white font-bold text-lg mb-1">We'll be in touch soon.</p>
-              <p class="text-zinc-500 text-sm">Thanks for reaching out. Expect a reply within one business day.</p>
+              <p class="text-zinc-500 text-sm">Thanks for reaching out. You're on the list.</p>
             </div>
           </div>
         </div>
@@ -153,10 +153,10 @@ async function handleSubmit() {
 }
 
 const bullets = [
-  '30-minute live walkthrough of the full workflow',
-  'We\'ll review your project type and answer accuracy questions',
-  'Transparent pricing — no sales games',
-  'Early access slots for Q1 deployments are limited',
+  'Progress updates as the robot gets closer to launch',
+  'A chance to shape the features we build first',
+  'Early-access opportunities before general availability',
+  'No spam, and you can opt out any time',
 ]
 </script>
 

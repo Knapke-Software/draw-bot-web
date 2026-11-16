@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="mb-14">
-        <h2 class="text-4xl font-extrabold tracking-tight">From BIM file to marked slab</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight">From plan file to marked slab</h2>
         <p class="text-zinc-400 mt-3 max-w-lg leading-relaxed">
           No surveyor. No crew standing around with tape measures.
         </p>
@@ -31,7 +31,7 @@
           href="#demo"
           class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange-DEFAULT hover:bg-orange-light text-white font-semibold text-sm transition-colors"
         >
-          Request a Demo
+          Join the Waitlist
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -46,15 +46,15 @@
 const steps = [
   {
     title: 'Upload your BIM or CAD file',
-    body: 'Send us your Revit, IFC, or DXF files. Our platform parses the layout geometry — walls, columns, MEP rough-in, anything you need marked on the slab.',
+    body: 'Send us your layout as DXF, with PDF and Revit export support planned. The platform reads the geometry: walls, columns, MEP rough-in, anything you need marked on the slab.',
   },
   {
     title: 'Robot navigates the slab',
-    body: 'Summit deploys the robot on your schedule. It self-localizes using total station control points and prints your layout with a single operator present.',
+    body: 'The robot works on your schedule. It locates itself on the slab from onboard sensors and site reference points, then prints your layout with a single operator present.',
   },
   {
     title: 'Your crew builds from the marks',
-    body: 'Every line, symbol, and annotation is printed at sub-2mm accuracy. Your foreman starts the morning from a fully marked floor.',
+    body: 'Lines, symbols, text, and QR codes are printed directly on the concrete. Your foreman starts the morning from a fully marked floor.',
   },
 ]
 </script>

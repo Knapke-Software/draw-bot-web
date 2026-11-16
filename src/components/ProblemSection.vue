@@ -5,19 +5,18 @@
 
         <!-- Left: lead stat -->
         <div>
-          <p class="text-zinc-500 text-sm font-medium mb-8 uppercase tracking-widest">Layout is still a manual problem</p>
+          <h2 class="text-zinc-500 text-sm font-medium mb-8 uppercase tracking-widest">Construction layout is still manual</h2>
           <div class="mb-8">
             <div class="flex items-end gap-1 leading-none mb-4">
-              <span class="text-[88px] font-black text-white leading-none">5–9</span>
-              <span class="text-5xl font-black text-orange-DEFAULT mb-3">%</span>
+              <span class="text-[88px] font-black text-white leading-none">Days</span>
             </div>
             <p class="text-zinc-400 leading-relaxed max-w-sm">
-              of total project cost goes to rework. Layout errors are the single biggest driver — and they start with a tape measure.
+              of crew time per floor plate go to marking layout by hand. Every error made there gets built into the structure.
             </p>
           </div>
           <div class="pt-8 border-t border-white/5">
             <p class="text-zinc-500 text-sm leading-relaxed">
-              A single floor plate takes a full crew 2–3 days to lay out manually. That's skilled tradespeople measuring and marking when they could be building.
+              Skilled tradespeople spend that time measuring and snapping lines when they could be building.
             </p>
           </div>
         </div>
@@ -27,7 +26,7 @@
           <div class="pb-8 pl-5 border-l-2 border-orange-DEFAULT/50">
             <h3 class="text-white font-semibold text-lg mb-2">Measurement error compounds</h3>
             <p class="text-zinc-500 text-sm leading-relaxed">
-              A 5mm error at column grid becomes a 20mm problem at the partition wall. By the time it surfaces on site, the rework conversation with your GC is already overdue.
+              A small error at the column grid grows by the time it reaches the partition wall. By the time it surfaces on site, the rework conversation with your GC is already overdue.
             </p>
           </div>
           <div class="pt-8 pl-5 border-l-2 border-white/10">

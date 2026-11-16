@@ -10,7 +10,7 @@
       </div>
 
       <!-- Feature rows -->
-      <div class="grid md:grid-cols-2 gap-x-16 mb-16">
+      <div class="grid md:grid-cols-2 gap-x-16">
         <div
           v-for="feature in features"
           :key="feature.title"
@@ -25,27 +25,6 @@
             <h3 class="text-white font-semibold text-base mb-1">{{ feature.title }}</h3>
             <p class="text-zinc-500 text-sm leading-relaxed">{{ feature.body }}</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Comparison table -->
-      <div class="rounded-lg border border-white/5 overflow-hidden">
-        <div class="grid grid-cols-3 bg-[#111118] border-b border-white/5 text-xs font-semibold uppercase tracking-wider">
-          <div class="px-6 py-4 text-zinc-500">Layout method</div>
-          <div class="px-6 py-4 text-zinc-500 text-center">Accuracy</div>
-          <div class="px-6 py-4 text-zinc-500 text-center">Crew required</div>
-        </div>
-        <div
-          v-for="row in comparison"
-          :key="row.method"
-          class="grid grid-cols-3 border-b border-white/5 last:border-0 text-sm"
-          :class="row.highlight ? 'bg-orange-DEFAULT/5' : 'bg-[#0a0a10]'"
-        >
-          <div class="px-6 py-4 font-medium flex items-center gap-2" :class="row.highlight ? 'text-orange-DEFAULT' : 'text-zinc-400'">
-            {{ row.method }}
-          </div>
-          <div class="px-6 py-4 text-center" :class="row.highlight ? 'text-white font-semibold' : 'text-zinc-500'">{{ row.accuracy }}</div>
-          <div class="px-6 py-4 text-center" :class="row.highlight ? 'text-white font-semibold' : 'text-zinc-500'">{{ row.crew }}</div>
         </div>
       </div>
 
@@ -91,30 +70,24 @@ const IconShield = makeIcon(() => [
 
 const features = [
   {
-    title: 'Sub-2mm accuracy',
-    body: 'Total station localisation and closed-loop control. Drift doesn\'t accumulate across the floor plate.',
+    title: 'Built for construction-grade accuracy',
+    body: 'Closed-loop motion control with sensor fusion, aimed at a ±3 mm target. Accuracy is measured against benchmarks, not assumed.',
     icon: IconTarget,
   },
   {
-    title: '10× faster than manual layout',
-    body: 'One operator with Summit covers in hours what a full crew takes days to mark.',
+    title: 'One operator, not a crew',
+    body: 'Set up the plan, start the job, and let the robot do the marking while your trades stay on production work.',
     icon: IconTimer,
   },
   {
-    title: 'BIM and CAD native',
-    body: 'Direct DXF, IFC, and Revit ingestion. No manual redrawing, no conversion loss.',
+    title: 'Works from your plans',
+    body: 'Layout geometry comes straight from your CAD files, so there is no manual redrawing.',
     icon: IconFile,
   },
   {
     title: 'Jobsite hardened',
-    body: 'Designed for dusty, rough concrete environments — not a temperature-controlled warehouse.',
+    body: 'Designed for dusty, rough concrete, and prints directly on raw slab.',
     icon: IconShield,
   },
-]
-
-const comparison = [
-  { method: 'Manual tape & chalk',   accuracy: '±10–25mm', crew: '2–4 people', highlight: false },
-  { method: 'Robotic total station', accuracy: '±2–5mm',   crew: '1–2 people', highlight: false },
-  { method: 'Summit Robotics',       accuracy: '<2mm',      crew: '1 operator', highlight: true  },
 ]
 </script>

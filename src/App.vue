@@ -6,6 +6,7 @@
       <ProblemSection />
       <HowItWorksSection />
       <WhySummitSection />
+      <FaqSection />
       <DemoFormSection />
     </main>
     <FooterSection />
@@ -18,6 +19,7 @@ import HeroSection       from './components/HeroSection.vue'
 import ProblemSection    from './components/ProblemSection.vue'
 import HowItWorksSection from './components/HowItWorksSection.vue'
 import WhySummitSection  from './components/WhySummitSection.vue'
+import FaqSection        from './components/FaqSection.vue'
 import DemoFormSection   from './components/DemoFormSection.vue'
 import FooterSection     from './components/FooterSection.vue'
 </script>

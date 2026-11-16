@@ -18,9 +18,9 @@
           </h1>
 
           <p class="text-zinc-400 text-lg leading-relaxed mb-10 max-w-lg">
-            Summit Robotics prints your construction layout directly on the slab —
-            from your BIM files, overnight, without a crew. Sub-2mm accuracy.
-            Zero rework.
+            Summit Robotics is building an autonomous robot that prints construction
+            layout directly on the slab from your CAD and BIM files, with no tape
+            measures and no layout crew. Launching 2027.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -28,7 +28,7 @@
               href="#demo"
               class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange-DEFAULT hover:bg-orange-light text-white font-semibold transition-colors text-sm"
             >
-              Request a Demo
+              Join the Waitlist
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -46,8 +46,8 @@
         <div class="relative flex items-center justify-center">
           <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-white/8">
             <img
-              src="../assets/robot.png"
-              alt="Summit Robotics layout robot on a concrete slab"
+              src="../assets/robot.jpg"
+              alt="Concept rendering of the Summit Robotics layout robot printing a line on a concrete slab" width="1448" height="1086" fetchpriority="high"
               class="w-full h-full object-cover"
             />
           </div>
@@ -69,9 +69,9 @@
 
 <script setup lang="ts">
 const stats = [
-  { value: '10×',    label: 'Faster than manual layout' },
-  { value: '<2mm',   label: 'Accuracy on the slab' },
-  { value: '100%',   label: 'BIM / CAD native' },
-  { value: 'After Hours', label: 'Works while your crew is off-site' },
+  { value: '2027',        label: 'Planned launch' },
+  { value: '±3 mm',       label: 'Target accuracy on the slab' },
+  { value: 'CAD / BIM',   label: 'Plans in, layout out' },
+  { value: 'After hours', label: 'Works while your crew is off-site' },
 ]
 </script>

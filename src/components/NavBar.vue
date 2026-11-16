@@ -20,13 +20,14 @@
       <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
         <a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a>
         <a href="#why-summit"   class="hover:text-white transition-colors">Why Summit</a>
+        <a href="#faq"          class="hover:text-white transition-colors">FAQ</a>
       </nav>
 
       <a
         href="#demo"
         class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-orange-DEFAULT hover:bg-orange-light text-white text-sm font-semibold transition-colors"
       >
-        Request a Demo
+        Join the Waitlist
       </a>
 
       <!-- Mobile menu button -->
@@ -51,12 +52,13 @@
     >
       <a href="#how-it-works" class="text-zinc-400 hover:text-white transition-colors" @click="mobileOpen = false">How It Works</a>
       <a href="#why-summit"   class="text-zinc-400 hover:text-white transition-colors" @click="mobileOpen = false">Why Summit</a>
+      <a href="#faq"          class="text-zinc-400 hover:text-white transition-colors" @click="mobileOpen = false">FAQ</a>
       <a
         href="#demo"
         class="inline-flex justify-center px-4 py-2.5 rounded-md bg-orange-DEFAULT text-white font-semibold"
         @click="mobileOpen = false"
       >
-        Request a Demo
+        Join the Waitlist
       </a>
     </div>
   </header>
