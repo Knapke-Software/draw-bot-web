@@ -30,11 +30,11 @@ const faqs = [
   },
   {
     q: 'What file formats will it work from?',
-    a: 'We are starting with DXF. PDF and Revit export support are planned.',
+    a: 'We are starting with common CAD formats, and plan to support more over time.',
   },
   {
     q: 'How accurate will it be?',
-    a: 'Our design target is about ±3 mm (1/8 inch) on the slab. We will publish measured results as we complete field testing.',
+    a: 'Accuracy is our top design priority. We'll publish measured results once field testing is complete.',
   },
 ]
 

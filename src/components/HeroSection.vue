@@ -70,8 +70,8 @@
 <script setup lang="ts">
 const stats = [
   { value: '2027',        label: 'Planned launch' },
-  { value: '±3 mm',       label: 'Target accuracy on the slab' },
-  { value: 'CAD / BIM',   label: 'Plans in, layout out' },
+  { value: 'Accuracy',     label: 'Our top design priority' },
+  { value: 'CAD / BIM',   label: 'Works from your existing plans' },
   { value: 'After hours', label: 'Works while your crew is off-site' },
 ]
 </script>

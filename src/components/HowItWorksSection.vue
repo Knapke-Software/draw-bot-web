@@ -46,7 +46,7 @@
 const steps = [
   {
     title: 'Upload your BIM or CAD file',
-    body: 'Send us your layout as DXF, with PDF and Revit export support planned. The platform reads the geometry: walls, columns, MEP rough-in, anything you need marked on the slab.',
+    body: 'Send us your layout as a CAD file, with more formats planned. The platform reads the geometry: walls, columns, MEP rough-in, anything you need marked on the slab.',
   },
   {
     title: 'Robot navigates the slab',
